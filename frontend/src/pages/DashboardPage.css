@@ -1,0 +1,71 @@
+/* DashboardPage.css */
+
+.dashboard-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+.MuiPaper-root {
+  border-radius: 16px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fafafa;
+}
+
+.MuiTypography-h4 {
+  font-weight: 600;
+  color: #1976d2;
+  margin-bottom: 24px;
+}
+
+.MuiTypography-h5 {
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.MuiTypography-subtitle1 {
+  font-weight: 500;
+  color: #444;
+}
+
+.MuiListItem-root {
+  background-color: #f5f5f5;
+  margin-bottom: 4px;
+  border-radius: 8px;
+  padding: 6px 12px;
+}
+
+.MuiLink-root {
+  text-decoration: none;
+  color: #1976d2;
+  font-weight: 500;
+}
+
+.MuiLink-root:hover {
+  text-decoration: underline;
+}
+
+.MuiAlert-root {
+  margin-bottom: 20px;
+}
+
+.MuiGrid-container {
+  margin-top: 8px;
+}
+
+.MuiTypography-root {
+  font-size: 0.95rem;
+}
+
+@media (max-width: 600px) {
+  .MuiTypography-h4 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .MuiPaper-root {
+    padding: 16px !important;
+  }
+}
