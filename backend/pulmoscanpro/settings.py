@@ -206,6 +206,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000", # Your React dev server
     "http://127.0.0.1:3000",
+    "https://pulmoscan-pro-frontend.onrender.com"
     # Add your Render frontend URL when deployed (e.g., "https://your-react-app.onrender.com")
 ]
 #CORS_ALLOW_ALL_ORIGINS = False # Set to False for production, list specific origins

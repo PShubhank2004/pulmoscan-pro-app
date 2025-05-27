@@ -1,1 +1,1 @@
-web: python manage.py create_initial_users && gunicorn pulmoscanpro.wsgi:application --bind 0.0.0.0:$PORT
+web: gunicorn pulmoscanpro.wsgi:application --bind 0.0.0.0:$PORT
