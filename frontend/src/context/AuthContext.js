@@ -46,7 +46,7 @@ export const AuthProvider = ({ children }) => {
 
     const loginUser = async (username, password) => { // Adjusted to take username, password
         try {
-            const response = await fetch('${API_BASE_URL}auth/token/', { // Ensure this URL is correct
+            const response = await fetch(`${API_BASE_URL}auth/token/`, { // Ensure this URL is correct
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -98,7 +98,7 @@ export const AuthProvider = ({ children }) => {
         }
 
         try {
-            const response = await fetch('${API_BASE_URL}auth/token/refresh/', {
+            const response = await fetch(`${API_BASE_URL}auth/token/refresh/`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
