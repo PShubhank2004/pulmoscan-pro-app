@@ -25,7 +25,7 @@ function ScanReportDetail() {
       setLoading(true);
       setError('');
       try {
-        const response = await axiosInstance.get(`http://127.0.0.1:8000/api/scan-reports/${id}/`);
+        const response = await axiosInstance.get(`scan-reports/${id}/`);
         setReport(response.data);
       } catch (err) {
         console.error('Failed to fetch scan report:', err);

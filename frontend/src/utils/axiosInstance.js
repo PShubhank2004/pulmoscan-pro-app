@@ -3,8 +3,7 @@ import axios from 'axios';
 import { jwtDecode } from 'jwt-decode'; // For decoding tokens
 import dayjs from 'dayjs'; // For checking token expiry time
 
-const baseURL = 'http://127.0.0.1:8000/api/';
-
+const baseURL = process.env.REACT_APP_API_BASE_URL;
 const axiosInstance = axios.create({
     baseURL,
     headers: {

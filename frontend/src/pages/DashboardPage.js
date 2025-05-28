@@ -38,14 +38,14 @@ function DashboardPage() {
 
       try {
         if (user.role === 'admin' || user.role === 'pharmacist') {
-          const stockResponse = await axiosInstance.get('http://127.0.0.1:8000/api/dashboard/stock-summary/', { headers });
+          const stockResponse = await axiosInstance.get('dashboard/stock-summary/', { headers });
           setStockSummary(stockResponse.data);
         } else {
           setStockSummary(null);
         }
 
         if (user.role === 'admin' || user.role === 'doctor') {
-          const doctorResponse = await axiosInstance.get('http://127.0.0.1:8000/api/dashboard/doctor-summary/', { headers });
+          const doctorResponse = await axiosInstance.get('dashboard/doctor-summary/', { headers });
           setDoctorSummary(doctorResponse.data);
         } else {
           setDoctorSummary(null);

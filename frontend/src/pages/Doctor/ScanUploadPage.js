@@ -52,7 +52,7 @@ function ScanUploadPage() {
     formData.append('scan_image', scanImage);
 
     try {
-      const response = await axiosInstance.post('http://127.0.0.1:8000/api/scan-reports/', formData, {
+      const response = await axiosInstance.post('scan-reports/', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           'Authorization': `Bearer ${authTokens.access}`, // Add Authorization header

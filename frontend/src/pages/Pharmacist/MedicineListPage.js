@@ -40,7 +40,7 @@ function MedicineListPage() {
     }
 
     try {
-      const response = await axiosInstance.get('http://127.0.0.1:8000/api/medicines/', {
+      const response = await axiosInstance.get('medicines/', {
         headers: {
           'Authorization': `Bearer ${authTokens.access}`, // <--- ADD AUTH HEADER
         },

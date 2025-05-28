@@ -16,7 +16,7 @@ import { // Retaining basic MUI imports for consistency in styling, remove if no
   ListItemText,
   // Removed ListItemSecondaryAction, IconButton
 } from '@mui/material';
-
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
 function PatientHistoryPage() {
   const { authTokens } = useAuth(); // <--- GET authTokens
@@ -36,7 +36,7 @@ function PatientHistoryPage() {
     }
 
     try {
-      const response = await axiosInstance.get(`http://127.0.0.1:8000/api/scan-reports/?patient_name=${name}`, {
+      const response = await axiosInstance.get(`scan-reports/?patient_name=${name}`, {
         headers: {
           'Authorization': `Bearer ${authTokens.access}`, // <--- ADD Authorization HEADER
         },

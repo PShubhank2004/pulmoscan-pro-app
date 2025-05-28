@@ -12,6 +12,7 @@ import {
     Container,
 } from '@mui/material';
 
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 const UserProfile = () => {
     const { authTokens, user, logout } = useAuth();
     const [profileData, setProfileData] = useState(null);
@@ -33,7 +34,7 @@ const UserProfile = () => {
 
             try {
                 // Corrected URL based on your Postman test result
-                const response = await axiosInstance.get('http://localhost:8000/api/user-profiles/', {
+                const response = await axiosInstance.get('user-profiles/', {
                     headers: {
                         Authorization: `Bearer ${authTokens.access}`,
                     },

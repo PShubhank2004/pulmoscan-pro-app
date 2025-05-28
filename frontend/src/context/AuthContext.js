@@ -8,6 +8,8 @@ const AuthContext = createContext();
 
 export default AuthContext;
 
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+
 export const AuthProvider = ({ children }) => {
     const navigate = useNavigate();
 
@@ -44,7 +46,7 @@ export const AuthProvider = ({ children }) => {
 
     const loginUser = async (username, password) => { // Adjusted to take username, password
         try {
-            const response = await fetch('http://localhost:8000/api/auth/token/', { // Ensure this URL is correct
+            const response = await fetch('${API_BASE_URL}auth/token/', { // Ensure this URL is correct
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -96,7 +98,7 @@ export const AuthProvider = ({ children }) => {
         }
 
         try {
-            const response = await fetch('http://localhost:8000/api/auth/token/refresh/', {
+            const response = await fetch('${API_BASE_URL}auth/token/refresh/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -46,7 +46,7 @@ function MedicineFormPage() {
       }
 
       try {
-        const response = await axiosInstance.get(`http://127.0.0.1:8000/api/medicines/${id}/`, {
+        const response = await axiosInstance.get(`medicines/${id}/`, {
           headers: {
             'Authorization': `Bearer ${authTokens.access}`, // <--- ADD AUTH HEADER
           },
@@ -100,14 +100,14 @@ function MedicineFormPage() {
 
     try {
       if (id) {
-        await axiosInstance.put(`http://127.0.0.1:8000/api/medicines/${id}/`, formData, {
+        await axiosInstance.put(`medicines/${id}/`, formData, {
           headers: {
             'Authorization': `Bearer ${authTokens.access}`, // <--- ADD AUTH HEADER
           },
         });
         setSuccessMessage('Medicine updated successfully!');
       } else {
-        await axiosInstance.post('http://127.0.0.1:8000/api/medicines/', formData, {
+        await axiosInstance.post('medicines/', formData, {
           headers: {
             'Authorization': `Bearer ${authTokens.access}`, // <--- ADD AUTH HEADER
           },
